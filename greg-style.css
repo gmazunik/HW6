@@ -1,0 +1,77 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic|Oxygen:400,700);
+
+body {
+	min-width: 960px;
+	background-image: url('img/subtle_grunge_@2X.png')
+}
+
+* {
+	font-family: 'Arvo', serif;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+#header {
+	margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+	height: 120px;
+	text-align: center;
+}
+
+#logo {
+	display: inline;
+	width: 128px;
+	height: 72px;
+	float: left;
+}
+
+#title {
+	display: inline;
+	margin: 0 auto;
+	font-family: 'Oxygen', sans-serif;
+}
+
+#date {
+	display: inline;
+	width: 128px;
+	height: 72px;
+	float: right;
+}
+
+#menu {
+	margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+	height: 40px;
+}
+
+#main {
+	margin-left: auto;
+	margin-left: auto;
+	padding: 80px 160px 80px 160px;
+}
+
+#footer {
+	margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+	height: 80px;
+	text-align: center;
+	font-family: 'Oxygen', sans-serif;
+}
+
+.cf:before, .cf:after {
+	content: "";
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+.cf {
+	zoom: 1;
+}
