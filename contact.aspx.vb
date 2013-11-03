@@ -1,5 +1,5 @@
 ﻿
-Partial Class login_default
+Partial Class contact
     Inherits System.Web.UI.Page
 
 End Class
