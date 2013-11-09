@@ -113,3 +113,9 @@ body {
 .cf {
 	zoom: 1;
 }
+
+.deletedSongHighlight {
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+}

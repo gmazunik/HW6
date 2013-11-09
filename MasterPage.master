@@ -19,7 +19,7 @@
 				</div>
 				
 				<div id="date">
-
+					<asp:Label ID="lblDate" runat="server" Text=""></asp:Label>
 				</div>
 
 				<div id="title">
@@ -53,7 +53,7 @@
 					</div>
 
 			<div id="footer">
-				&copy; 2013 06K:183 Software Design &amp; Development
+				Copyright &copy; <asp:Label ID="lblCopyright" runat="server" Text=""></asp:Label> Greg Mazunik, 06K:183 Software Design &amp; Development
 			</div>
     </div>
   </form>
