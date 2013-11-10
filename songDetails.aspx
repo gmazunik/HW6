@@ -5,16 +5,30 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	<div class="centerWrapper">
 		<asp:Label ID="lblDeletedSong" runat="server" Text=""></asp:Label>
-		<asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="songID" DataSourceID="SqlDataSource1">
-			<Fields>
-				<asp:BoundField DataField="songTitle" HeaderText="Song Title" SortExpression="songTitle" />
-				<asp:BoundField DataField="songAuthors" HeaderText="Authors" SortExpression="songAuthors" />
-				<asp:BoundField DataField="songKey" HeaderText="Key" SortExpression="songKey" />
-				<asp:BoundField DataField="songTempo" HeaderText="Tempo" SortExpression="songTempo" />
-				<asp:BoundField DataField="songNotes" HeaderText="Notes" SortExpression="songNotes" />
-				<asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-			</Fields>
-		</asp:DetailsView>
+			<asp:DetailsView 
+				ID="DetailsView1" 
+				runat="server" 
+				AutoGenerateRows="False" 
+				DataKeyNames="songID" 
+				DataSourceID="SqlDataSource1"
+				HeaderText="Song Details"
+				CssClass="cssdetailsview"
+				HeaderStyle-CssClass="header"
+				FieldHeaderStyle-CssClass="fieldheader"
+				ItemStyle-CssClass="item"
+				AlternatingRowStyle-CssClass="altrow"
+				CommandRowStyle-CssClass="command"
+				PagerStyle-CssClass="pager"
+			>
+				<Fields>
+					<asp:BoundField DataField="songTitle" HeaderText="Song Title" SortExpression="songTitle" />
+					<asp:BoundField DataField="songAuthors" HeaderText="Authors" SortExpression="songAuthors" />
+					<asp:BoundField DataField="songKey" HeaderText="Key" SortExpression="songKey" />
+					<asp:BoundField DataField="songTempo" HeaderText="Tempo" SortExpression="songTempo" />
+					<asp:BoundField DataField="songNotes" HeaderText="Notes" SortExpression="songNotes" />
+					<asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+				</Fields>
+			</asp:DetailsView>
 		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_songDatabase %>" DeleteCommand="DELETE FROM [Table] WHERE [songID] = @songID" InsertCommand="INSERT INTO [Table] ([songTitle], [songAuthors], [songKey], [songTempo], [songNotes]) VALUES (@songTitle, @songAuthors, @songKey, @songTempo, @songNotes)" SelectCommand="SELECT * FROM [Table] WHERE ([songID] = @songID)" UpdateCommand="UPDATE [Table] SET [songTitle] = @songTitle, [songAuthors] = @songAuthors, [songKey] = @songKey, [songTempo] = @songTempo, [songNotes] = @songNotes WHERE [songID] = @songID">
 			<DeleteParameters>
 				<asp:Parameter Name="songID" Type="Int32" />

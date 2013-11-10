@@ -4,7 +4,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 	<div class="centerWrapper">
-		<asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="songID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+		<asp:DetailsView 
+			ID="DetailsView1" 
+			runat="server" 
+			AutoGenerateRows="False" 
+			DataKeyNames="songID" 
+			DataSourceID="SqlDataSource1"
+			HeaderText="Add a New Song"
+			CssClass="cssdetailsview"
+			HeaderStyle-CssClass="header"
+			FieldHeaderStyle-CssClass="fieldheader"
+			ItemStyle-CssClass="item"
+			AlternatingRowStyle-CssClass="altrow"
+			CommandRowStyle-CssClass="command"
+			PagerStyle-CssClass="pager"
+		>
 			<Fields>
 				<asp:BoundField DataField="songTitle" HeaderText="Song Title" SortExpression="songTitle" />
 				<asp:BoundField DataField="songAuthors" HeaderText="Authors" SortExpression="songAuthors" />

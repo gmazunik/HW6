@@ -12,7 +12,20 @@
 			Search for another song by title:&nbsp;&nbsp;&nbsp;
 			<asp:TextBox ID="tbSearch2" runat="server" AutoPostBack="True"></asp:TextBox>
 			
-			<asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="songID">
+			<asp:GridView 
+				ID="GridView1" 
+				runat="server" 
+				AllowPaging="True" 
+				AllowSorting="True" 
+				AutoGenerateColumns="False" 
+				DataKeyNames="songID" 
+				DataSourceID="SqlDataSource1"
+				PageSize="10" 
+				Gridlines="None"
+				CssClass="cssgridview"
+				AlternatingRowStyle-CssClass="alt"
+				PagerStyle-CssClass="pgr"
+			>				
 				<Columns>
 					<asp:BoundField DataField="songTitle" HeaderText="Song Title" SortExpression="songTitle" />
 					<asp:HyperLinkField DataNavigateUrlFields="songID" DataNavigateUrlFormatString="./songDetails.aspx?songID={0}" Text="View Details" />

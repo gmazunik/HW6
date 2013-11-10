@@ -103,19 +103,142 @@ body {
 	font-family: 'Oxygen', sans-serif;
 }
 
-.cf:before, .cf:after {
-	content: "";
-	display: table;
+/* GridView formatting START*/
+
+.cssgridview {
+	width: 100%;
+	margin: 5px 0 10px 0;
+	border: solid 1px #525252;
+	border-collapse: collapse;
+	text-align: center; 
+	color: #7C6F57;
+	background-color: #F7F6F3;
 }
-.cf:after {
-	clear: both;
+
+.cssgridview td {
+	padding: 10px;
+	border: solid 1px #c1c1c1;
+	color: #717171;
 }
-.cf {
-	zoom: 1;
+
+.cssgridview td a, a:visited {
+	color: #717171;
+	text-decoration: none;
 }
+
+.cssgridview th {
+	padding: 10px;
+	color: #FFFFFF;
+	background: #424242 url(./img/grd_head.png) repeat-x top;
+	border-left: solid 1px #525252;
+	font-size: 0.9em;
+}  
+
+.cssgridview th a {
+	color: silver;
+	text-decoration: none;
+}  
+
+.cssgridview th a:hover {
+	color: white;
+	background-color: #7C6F57;
+	text-decoration: underline;
+}
+
+.cssgridview .alt {
+	background: #fcfcfc url(./img/grd_alt.png) repeat-x top;
+}
+
+.cssgridview .pgr {
+	background: #424242 url(./img/grd_pgr.png) repeat-x top;
+}  
+
+.cssgridview .pgr table {
+	margin: 5px 0;
+}  
+
+.cssgridview .pgr td {
+	border-width: 0;
+	padding: 0 6px;
+	border-left: solid 1px #666666;
+	font-weight: bold;
+	color: #FFFFFF;
+	line-height: 12px;
+}     
+
+.cssgridview .pgr a {
+	color: #666666;
+	text-decoration: none;
+}  
+
+.cssgridview .pgr a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+/* GridView formatting END*/
+
+/* DetailsView formatting START */
+
+.cssdetailsview {
+	background-color: #FFFFFF;
+	margin: 5px 0 10px 0;
+	border: solid 1px #525252;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.cssdetailsview td {
+	padding: 10px;
+	border: solid 1px #C1C1C1;
+	color: #717171;
+	text-align: left;
+}
+
+.cssdetailsview .header td {
+	text-align: center;
+	padding: 4px 2px;
+	color: silver;
+	background: #424242 url(./css/grd_head.png) repeat-x top;
+	border-left: solid 1px #525252;
+}
+
+.cssdetailsview .fieldheader {
+	color: red;
+	width: 150px;
+	text-align: right;
+}
+
+.cssdetailsview .altrow {
+	background: #FCFCFC url(./css/grd_alt.png) repeat-x top;
+}
+
+.cssdetailsview .command {
+	background: #424242 url(./css/grd_pgr.png) repeat-x top;
+	line-height: 20px;
+}
+
+.cssdetailsview .command td {
+	text-align: center;
+}
+
+.cssdetailsview .command a {
+	color: silver;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.cssdetailsview .command a:hover {
+	color: silver;
+	text-decoration: underline;
+}
+
+.cssdetailsview .pager {}
 
 .deletedSongHighlight {
 	font-style: italic;
 	font-weight: bold;
 	text-decoration: underline;
 }
+
+/* DetailsView formatting END */
