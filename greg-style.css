@@ -51,7 +51,7 @@ body {
 #menu {
 	margin-left: auto;
   margin-right: auto;
-  width: 940px;
+  width: 480px;
 	height: 40px;
 	text-align: center;
 }
@@ -59,31 +59,27 @@ body {
 .centerWrapper {
 	margin-left: auto;
   margin-right: auto;
-	width: 400px;
+	width: 480px;
 	font-family: 'Oxygen', sans-serif;
 }
 
 /*Styling for menu control adapted from http://msdn.microsoft.com/en-us/library/ms366731.aspx */
-/*---------------------------------------*/
+
 .menuLevel1 {
-	color: black;
+	color: black !important;
 	font-size: large;
 }
 
 .menuLevel2 {
-	color: white;
+	color: white !important;
 	background-color: black;
 	font-size: medium;
 }
 
-.menuLevel3 {
-	color: black;
-	background-color: silver;
-	font-size: small;
-}
-
 .hoverstyle {
 	font-weight: bold;
+	text-decoration: underline;
+	color: #FF4848;
 }
 /*---------------------------------------*/
 
@@ -101,6 +97,22 @@ body {
 	height: 80px;
 	text-align: center;
 	font-family: 'Oxygen', sans-serif;
+}
+
+.contact {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+.error {
+	color: #FF4848;
+	font-style: italic;
+}
+
+.shortExplanation {
+	font-style: italic;
+	font-size: 0.85em;
 }
 
 /* GridView formatting START*/
@@ -141,7 +153,7 @@ body {
 
 .cssgridview th a:hover {
 	color: white;
-	background-color: #7C6F57;
+	background-color: #FF4848;
 	text-decoration: underline;
 }
 
@@ -172,7 +184,7 @@ body {
 }  
 
 .cssgridview .pgr a:hover {
-	color: #000000;
+	color: #FF4848;
 	text-decoration: underline;
 }
 

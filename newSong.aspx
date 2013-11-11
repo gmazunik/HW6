@@ -17,8 +17,13 @@
 			ItemStyle-CssClass="item"
 			AlternatingRowStyle-CssClass="altrow"
 			CommandRowStyle-CssClass="command"
-			PagerStyle-CssClass="pager"
+			PagerStyle-CssClass="pager" DefaultMode="Insert"
 		>
+<AlternatingRowStyle CssClass="altrow"></AlternatingRowStyle>
+
+<CommandRowStyle CssClass="command"></CommandRowStyle>
+
+<FieldHeaderStyle CssClass="fieldheader"></FieldHeaderStyle>
 			<Fields>
 				<asp:BoundField DataField="songTitle" HeaderText="Song Title" SortExpression="songTitle" />
 				<asp:BoundField DataField="songAuthors" HeaderText="Authors" SortExpression="songAuthors" />
@@ -27,8 +32,12 @@
 				<asp:BoundField DataField="songNotes" HeaderText="Notes" SortExpression="songNotes" />
 				<asp:CommandField ShowInsertButton="True" />
 			</Fields>
+
+<HeaderStyle CssClass="header"></HeaderStyle>
+
+<PagerStyle CssClass="pager"></PagerStyle>
 		</asp:DetailsView>
-		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_songDatabase %>" DeleteCommand="DELETE FROM [Table] WHERE [songID] = @songID" InsertCommand="INSERT INTO [Table] ([songTitle], [songAuthors], [songKey], [songTempo], [songNotes]) VALUES (@songTitle, @songAuthors, @songKey, @songTempo, @songNotes)" SelectCommand="SELECT * FROM [Table] WHERE ([songID] = @songID)" UpdateCommand="UPDATE [Table] SET [songTitle] = @songTitle, [songAuthors] = @songAuthors, [songKey] = @songKey, [songTempo] = @songTempo, [songNotes] = @songNotes WHERE [songID] = @songID">
+		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs_songDatabase %>" DeleteCommand="DELETE FROM [Table] WHERE [songID] = @songID" InsertCommand="INSERT INTO [Table] ([songTitle], [songAuthors], [songKey], [songTempo], [songNotes]) VALUES (@songTitle, @songAuthors, @songKey, @songTempo, @songNotes)" SelectCommand="SELECT * FROM [Table]" UpdateCommand="UPDATE [Table] SET [songTitle] = @songTitle, [songAuthors] = @songAuthors, [songKey] = @songKey, [songTempo] = @songTempo, [songNotes] = @songNotes WHERE [songID] = @songID">
 			<DeleteParameters>
 				<asp:Parameter Name="songID" Type="Int32" />
 			</DeleteParameters>
@@ -39,9 +48,6 @@
 				<asp:Parameter Name="songTempo" Type="Int32" />
 				<asp:Parameter Name="songNotes" Type="String" />
 			</InsertParameters>
-			<SelectParameters>
-				<asp:QueryStringParameter Name="songID" QueryStringField="songID" Type="Int32" />
-			</SelectParameters>
 			<UpdateParameters>
 				<asp:Parameter Name="songTitle" Type="String" />
 				<asp:Parameter Name="songAuthors" Type="String" />
